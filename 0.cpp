@@ -1,3 +1,12 @@
+/*******************************************************************
+** Program: Assignment 0 - Simple OpenMP Experiment
+** Author: Casey Anderson
+** Date: 04/09/2023
+** Description: Assignment 0 program using OpenMP to create threads
+and time their performance
+** Input: N/A
+** Output: csv of results
+*******************************************************************/
 #include <omp.h>
 #include <stdio.h>
 #include <math.h>
