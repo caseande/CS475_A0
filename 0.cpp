@@ -12,9 +12,7 @@
 #define NUMTRIES    10	// how many times to run the timing to get reliable timing data
 #endif
 
-
 #define SIZE        16384 	// array size -- you get to decide
-
 
 /*
 const int NUMT = 1;
@@ -28,7 +26,7 @@ float C[SIZE] = {};
 
 int main( ) {
 #ifdef   _OPENMP
-	//fprintf( stderr, "OpenMP version %d is supported here\n", _OPENMP );
+	fprintf( stderr, "OpenMP version %d is supported here\n", _OPENMP );
 #else
 	fprintf( stderr, "OpenMP is not supported here - sorry!\n" );
 	exit( 0 );
@@ -65,7 +63,7 @@ int main( ) {
         // Threads, Array Size, Loops, MFLOPS, Avg. MFlops
         printf("%d,%d,%d,%lf,%lf\n", NUMT, SIZE, NUMTRIES, maxMegaMults, summMults/(double)NUMTRIES);
 
-        //fprintf( stderr, "For %d threads, Peak Performance = %8.2lf MegaMults/Sec\n", NUMT, maxMegaMults);
+        fprintf( stderr, "For %d threads, Peak Performance = %8.2lf MegaMults/Sec\n", NUMT, maxMegaMults);
 
 	// note: %lf stands for "long float", which is how printf prints a "double"
 	//        %d stands for "decimal integer", not "double"
